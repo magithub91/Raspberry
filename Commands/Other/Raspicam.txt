@@ -1,0 +1,32 @@
+Raspicam
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    raspistill
++++++++++++++++++++++++++++++++++++++++++++++++++++
+//is the command line tool for capturing still photographs with the camera module.
+
+
+
++++++step1
+//take a picture
+
+raspistill -o cam.jpg
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+                    raspivid
+++++++++++++++++++++++++++++++++++++++++++++++++++
+//is the command line tool for capturing video with the camera module.
+
+
++++++step1
+//record a video using the following command
+
+raspivid -o vid.h264
+
++++++step2
+//Specify length of video
+
+raspivid -o video.h264 -t 10000
