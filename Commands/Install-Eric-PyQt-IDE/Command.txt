@@ -1,0 +1,33 @@
+S Mohsen AP
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+https://github.com/REDUNION/eric_ide_on_raspberry_pi_4/blob/master/setup%20code
+
+
+sudo apt-get update                     #update the Buster the raspberry pi operating system
+sudo apt-get dist-upgrade        
+sudo apt-get install qt5-default        #setup the qt5 software    
+sudo apt-get install qtcreator          #setup the qtcreator
+sudo apt-get install libqt5serialport5  #setup the qt5 serial port
+sudo apt-get install libqt5serialport5-dev
+sudo apt-get install qttools5-dev-tools
+sudo apt-get install eric               #setup the eric
+
+#reboot raspberry pi 4
+sudo reboot
+
+pyuic5                                  #add the following programme from the buster menu add software
+
+finish
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Learning:
++++++++++++++++++++++++Part2
+https://www.dideo.ir/v/yt/VvGfU5zJHiQ/%D8%AA%D9%85%D8%A7%D8%B4%D8%A7%DB%8C-%D9%88%DB%8C%D8%AF%D8%A6%D9%88-%D8%A7%D8%B2-%D8%AF%DB%8C%D8%AF%D8%A6%D9%88-watch-video-from-dideo
+
+
+
++++++++++++++++++++++++Part3
+Python GUI Example Part#3 – Control NeoPixel Digital RGB LED with sliders
+
+https://www.dideo.ir/v/yt/Ug0ZfgqA9So/%D8%AA%D9%85%D8%A7%D8%B4%D8%A7%DB%8C-%D9%88%DB%8C%D8%AF%D8%A6%D9%88-%D8%A7%D8%B2-%D8%AF%DB%8C%D8%AF%D8%A6%D9%88-watch-video-from-dideo
