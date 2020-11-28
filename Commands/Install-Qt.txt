@@ -1,0 +1,120 @@
+QT install
+
+Cross Compile
+
+//https://doc.qt.io/qtcreator/creator-developing-generic-linux.html
+//How to connect your "Development PC" to your "generic Linux devices" to "run, debug, and analyze applications built for them from Qt Creator"
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++Connecting Generic Remote Linux Devices
+++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++step1
+//On Development PC
+//Add your "tool chain" to "Qt Creator" 
+
+
+
+
++++++step1
+//https://doc.qt.io/qtcreator/creator-developing-generic-linux.html#configuring-ssh-connections
+
+//
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+QT Configurator for Windows cross-toolchains (No Ubuntu)
+++++++++++++++++++++++++++++++++++++++++++++++++
+//https://visualgdb.com/tools/QtCrossTool/
+
+
++++++Step1+++++++++QT 5.x installed on your Linux box
+//https://www.raspberrypi.org/forums/viewtopic.php?t=69163
+sudo apt-get update
+sudo apt-get upgrade
+
+//Har dastoori ro 2 bar ejra kon motmaen sho bedoone error tamoom mishan
+
+1. Install development libraries – [Pi]
+>sudo nano /etc/apt/sources.list
+
+>sudo reboot
+
+>sudo apt-get install qt4-dev-tools
+>sudo apt-get install qtcreator
+
+>sudo reboot
+
+>sudo apt-get install gcc
+>sudo apt-get install xterm
+>sudo apt-get install git-core
+>sudo apt-get install subversion
+
+>sudo reboot
+
+>sudo apt-get build-dep qt4-x11
+>sudo apt-get build-dep libqt5gui5
+>sudo apt-get install   libudev-dev libinput-dev libts-dev libxcb-xinerama0-dev libxcb-xinerama0
+
+>sudo reboot
+
+>>>Done
+
++++++Step2+++++++++A cross-compilation toolchain
+
+install "raspberry-gcc8.3.0-r2.exe" *with no change in configs
+install "mingw32-gcc9.1.0.exe" *with no change in configs
+
+>>>Done
+
++++++Step3+++++++++The same version of "QT for MinGW" installed on your Windows machine
+//Note: QT for MinGW > note QT-Creator
+//Be ebarati
+//Inja man dar addrese C:/QT File zipe "qt-everywhere-opensource-src-5.6.1.tar.xz" copy kardam
+
+1. Install QT for MinGW – [Windows]
+>Copy "qt-everywhere-opensource-src-5.6.1.tar.xz" to C:/QT
+
+2. install "Msys 1.0"
+
+3. extract "qt-everywhere-opensource-src-5.6.1.tar.xz" with "Msys 1.0"
+>Open Msys
+>cd /c/QT
+>tar xf qt-everywhere-opensource-src-5.6.1.tar.xz
+wait to extract the file
+
+4. 
+
+2. Use "QtCrossTools.exe" and make a SSH connection to Raspberrypi 4b
+>Targeted remote machine > select
+hostname=202.197.135.13
+username=pi
+pass=raspberry
+
+>Click on "Connect"
+>Click on "Save"
+//After that you see, the ip="202.197.135.13" is shown in "Targeted remote machine" tab
+
+3. 
+
+
+
+
+
+
+gcc -v
+//More about Gcc >>> https://linux.die.net/man/1/gcc
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++Cross Compile
+https://visualgdb.com/tutorials/raspberry/qt/embedded/
+
+
++++++++++++++++++++++++++++++++++Python PyQT5
+https://www.youtube.com/watch?v=GEfTw7N-k8I
+
+sudo apt-get install qt5-default pyqt5-dev pyqt5-dev-tools
+
+
