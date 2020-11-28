@@ -1,0 +1,10 @@
+to Shut Down raspberry
+
+
+
+
+to shutdown
+>sudo shutdown -h now
+
+to reboot
+>sudo shutdown -r now
