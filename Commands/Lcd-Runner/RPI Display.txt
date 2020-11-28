@@ -1,0 +1,92 @@
+LCD 
+
+Fine Model in this site:
+https://github.com/notro/fbtft/blob/master/fbtft_device.c
+
+something like this : .name = "tontec35_9486", /* boards after 02 July 2014 */
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Commands
+base on: https://www.circuitbasics.com/setup-lcd-touchscreen-raspberry-pi/
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++Commands
+
+////////
+sudo nano /boot/cmdline.txt
+///////
+
+////////////
+sudo raspi-config
+//////////////
+sudo nano /boot/config.txt
+//////////////
+sudo nano /usr/share/X11/xorg.conf.d/99-fbturbo.conf
+
+
+
+
+//////////////////////////////
+https://www.waveshare.com/wiki/3.5inch_RPi_LCD_(C)
+
++++++step1 
+//Install the touch driver
+
+git clone https://github.com/waveshare/LCD-show.git
+cd LCD-show/
+
++++++step2
+//Run LCD
+
+chmod +x LCD35C-show
+ ./LCD35C-show
+
++++++step3
+//Toggle between LCD and HDMI display
+
+cd LCD-show/
+ ./LCD-hdmi
+
++++++step4
+//This toggles the mode to LCD display:
+
+ ./LCD35C-show
+
++++++step5
+//Screen orientation settings
+
+//0 degree rotation
+cd LCD-show/
+./LCD35C-show 0
+
+//90 degree rotation
+cd LCD-show/
+./LCD35C-show 90
+
+//180 degree rotation
+cd LCD-show/
+./LCD35C-show 180
+
+//270 degree rotation
+cd LCD-show/
+./LCD35C-show 270
+
+
++++++step6
+//Touch screen calibration
+
+sudo apt-get install xinput-calibrator
+
+/*
+Click the "Menu" button on the taskbar, choose "Preference" -> "Calibrate Touchscreen".
+Finish the touch calibration following the prompts. Maybe rebooting is required to make calibration active.
+You can create a 99-calibration.conf file to save the touch parameters (not necessary if file exists).
+*/
+
+sudo mkdir /etc/X11/xorg.conf.d
+sudo nano /etc/X11/xorg.conf.d/99-calibration.conf
+
++++++step7
+sudo reboot
+
+
+
+
+
